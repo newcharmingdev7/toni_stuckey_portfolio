@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio Details - Personal Bootstrap Template</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Personal
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="portfolio-details-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">←</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div class="heading" style="border-bottom: none">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Portfolio Details</h1>
+                <p class="mb-0">
+                  Here are some of the projects I've developed, showcasing my work across various platforms and technologies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Portfolio Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide" data-id="1">
+                    <img src="assets/img/portfolio/web-1.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide" data-id="2">
+                    <img src="assets/img/portfolio/mobile-1.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide" data-id="3">
+                    <img src="assets/img/portfolio/ux-1.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide" data-id="4">
+                    <img src="assets/img/portfolio/web-2.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide" data-id="5">
+                    <img src="assets/img/portfolio/mobile-2.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide" data-id="6">
+                    <img src="assets/img/portfolio/ux-2.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide" data-id="7">
+                    <img src="assets/img/portfolio/web-3.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide" data-id="8">
+                    <img src="assets/img/portfolio/mobile-3.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide" data-id="9">
+                    <img src="assets/img/portfolio/ux-3.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div
+                class="portfolio-info"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h3>Project information</h3>
+                <ul>
+                  <li>
+                    <strong>Category</strong>:
+                    <span id="project-category"></span>
+                  </li>
+                  <li>
+                    <strong>Client</strong>: <span id="project-client"></span>
+                  </li>
+                  <li>
+                    <strong>Project date</strong>:
+                    <span id="project-date"></span>
+                  </li>
+                  <li>
+                    <strong>Project URL</strong>:
+                    <a href="#" id="project-url"></a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="portfolio-description"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <h2 id="project-title"></h2>
+                <p id="project-description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Details Section -->
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <h3 class="sitename">Toni Stuckey</h3>
+        <p>
+          Thank you for visiting my portfolio! If you're looking for a dedicated Full Stack Engineer or have an exciting project in mind, feel free to reach out. Let's create something amazing together!
+        </p>
+        <div class="social-links d-flex justify-content-center">
+          <a><i class="bi bi-twitter-x"></i></a>
+          <a><i class="bi bi-facebook"></i></a>
+          <a><i class="bi bi-instagram"></i></a>
+          <a><i class="bi bi-skype"></i></a>
+          <a><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span>Copyright</span>
+            <strong class="px-1 sitename">Toni Stuckey</strong>
+            <span>All Rights Reserved</span>
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you've purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            Designed by <a href="https://www.squarespace.com/">Squarespace</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectData = {
+          1: {
+            category: "Web development",
+            client: "Founders Workshop",
+            date: "01 January, 2005",
+            url: "https://foundersworkshop.com/",
+            title: "Founders Workshop - Custom Software Solutions",
+            description: "Founders Workshop specializes in developing custom software solutions for startups and small businesses. The development process focuses on building MVPs (Minimum Viable Products), product development, and internal software solutions. The workflow involves working closely with clients to bring innovative ideas to life through custom software tailored to specific business needs, utilizing cutting-edge technologies and best practices in product development.",
+          },
+          2: {
+            category: "Mobile App development",
+            client: "Fachat",
+            date: "August 14, 2019",
+            url: "https://apps.apple.com/us/app/fachat-online-video-chat/id1475875470",
+            title: "Fachat Online Video Chat App",
+            description: "The Fachat app enables users to engage in live video chats with people worldwide. The development process focused on creating a seamless video communication experience with secure and user-friendly functionality. The workflow involved designing an intuitive UI/UX for easy navigation, integrating real-time video communication technologies, and ensuring strong privacy features for users.",
+          },
+          3: {
+            category: "UX Design",
+            client: "All Vet Diagnostic Solutions Private Limited",
+            date: "October 1, 2024.",
+            url: "https://apps.apple.com/in/app/vetlab/id6502644832",
+            title: "Vetlab - Veterinary Healthcare Management App",
+            description: " The Vetlab app provides high-definition video consultations with veterinarians, appointment booking, and access to home test packages for pets. The development process focused on creating a smooth user experience for pet owners, enabling them to manage their pets' healthcare needs efficiently. Key features include secure video consultations, easy appointment scheduling, and seamless integration with various veterinary services.",
+          },
+          4: {
+            category: "Web development",
+            client: "Mindtrip",
+            date: "15 March, 2017",
+            url: "https://mindtrip.ai/",
+            title: "Mindtrip AI - Personalized Mental Wellness Platform",
+            description: "Mindtrip is an AI-powered platform that focuses on delivering personalized mental wellness experiences. The development process included designing AI-driven tools to provide tailored meditation, stress management, and mental health resources. The workflow emphasized user-friendly design, data security, and integration with AI models to offer a highly personalized approach to mental wellness.",
+          },
+          5: {
+            category: "Mobile App development",
+            client: "OkCupid",
+            date: "September 2009.",
+            url: "https://apps.apple.com/gb/app/okcupid-online-dating-app/id338701294",
+            title: "OkCupid - Online Dating App",
+            description: "OkCupid is a popular online dating app that connects people based on detailed user profiles and a compatibility algorithm. The development process focused on creating a seamless user experience, integrating features such as personalized matchmaking, location-based search, and chat functionality. The workflow involved building a scalable backend to support millions of users while ensuring data privacy and secure interactions.",
+          },
+          6: {
+            category: "UX Design",
+            client: "Adoraboo",
+            date: "15 April, 2020",
+            url: "https://play.google.com/store/apps/details?id=com.adoraboo&hl=en_US",
+            title: "Adoraboo - Baby and Parenting App",
+            description: "Adoraboo is a parenting app designed to assist new parents with a wide range of baby care tasks. The development process focused on creating user-friendly features such as daily parenting tips, baby activity tracking, and personalized content. The app is built to be intuitive, ensuring parents can easily navigate and manage their baby's development milestones.",
+          },
+          7: {
+            category: "Web development",
+            client: "Southwest Airlines",
+            date: "updated at 01 May, 2019",
+            url: "https://www.southwest.com/",
+            title: "Southwest Airlines - Flight Booking and Travel Services",
+            description: "The development of the Southwest Airlines website focuses on providing a seamless booking experience for flights, car rentals, and vacation packages. The workflow involved designing a user-friendly interface that enables customers to search for flights, manage reservations, and track travel status easily. The development emphasizes high scalability, secure transactions, and optimal user experience across devices.",
+          },
+          8: {
+            category: "Mobile App development",
+            client: "Ovvy",
+            date: "15 May, 2023",
+            url: "https://play.google.com/store/apps/details?id=com.ovvy&pli=1",
+            title: "Ovvy - Service Marketplace App",
+            description: "Ovvy is a marketplace app that connects users with trusted service providers across various categories, from home repairs to personal services. The development process focused on building a reliable platform where users can find, book, and review service providers. The workflow included integrating secure payment systems, real-time service tracking, and user-friendly booking interfaces to enhance customer experience.",
+          },
+          9: {
+            category: "UX Design",
+            client: "OkCupid",
+            date: "Sep, 2009",
+            url: "https://apps.apple.com/gb/app/okcupid-online-dating-app/id338701294",
+            title: " OkCupid - Online Dating App",
+            description: "OkCupid is a popular dating app that matches users based on compatibility through detailed profiles and questionnaires. The development process focused on creating a robust matchmaking algorithm, a user-friendly interface, and features like chat, search filters, and profile customization. The workflow included ensuring scalability, data security, and a seamless user experience for millions of users.",
+          },
+        };
+
+        function updateProjectInfo(projectId) {
+          const project = projectData[projectId];
+          if (project) {
+            document.getElementById("project-category").textContent = project.category;
+            document.getElementById("project-client").textContent = project.client;
+            document.getElementById("project-date").textContent = project.date;
+            document.getElementById("project-url").textContent = project.url;
+            document.getElementById("project-url").href = project.url;
+            document.getElementById("project-title").textContent = project.title;
+            document.getElementById("project-description").textContent = project.description;
+          }
+        }
+
+        // Get the project ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get("id");
+
+        // Initialize Swiper
+        const swiper = new Swiper(".portfolio-details-slider", {
+          loop: true,
+          speed: 600,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          slidesPerView: 1,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true,
+          },
+        });
+
+        // Update project information on init and slide change
+        function updateInfo() {
+          const activeSlide = swiper.slides[swiper.activeIndex];
+          const projectId = activeSlide.dataset.id;
+          if (projectId) {
+            updateProjectInfo(projectId);
+          }
+        }
+
+        swiper.on("slideChange", updateInfo);
+
+        // Set initial slide based on URL parameter
+        if (projectId) {
+          const slides = swiper.slides;
+          const initialSlideIndex = Array.from(slides).findIndex(
+            (slide) => slide.dataset.id === projectId
+          );
+          if (initialSlideIndex !== -1) {
+            swiper.slideTo(initialSlideIndex, 0, false);
+          }
+        }
+
+        // Initial update
+        updateInfo();
+      });
+    </script>
+  </body>
+</html>
