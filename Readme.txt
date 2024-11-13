@@ -1,5 +1,3 @@
-Thanks for downloading this template!
-
-Template Name: Toni Stuckey
+Name: Toni Stuckey portfolio
 Author: Designed by Squarespace
 
