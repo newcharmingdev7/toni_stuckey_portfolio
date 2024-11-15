@@ -41,6 +41,24 @@
         height: 100%;
         z-index: -1;
       }
+      * {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        @media print {
+            html { display: none; }
+        }
+        body::after {
+          content: "© Toni Stuckey";
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          opacity: 0.5;
+          font-size: 14px;
+          pointer-events: none;
+        }
     </style>
   </head>
 
@@ -859,6 +877,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+    (function(){
+      const _0x4f12=['Scene','PerspectiveCamera','WebGLRenderer','querySelector','#bg-canvas','setPixelRatio','devicePixelRatio','setSize','innerWidth','innerHeight'];
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
       const renderer = new THREE.WebGLRenderer({
@@ -928,8 +948,8 @@
           }
           stars.geometry.attributes.position.needsUpdate = true;
       });
-    </script>
-    <script>
+    })();
+
       $(document).ready(function() {
         $('.php-email-form').submit(function (e) {
         e.preventDefault();
@@ -955,6 +975,59 @@
       });
 
       });
+
+      document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    document.addEventListener('keydown', (e) => {
+        if (
+            // Prevent: "F12", "Ctrl + Shift + I", "Ctrl + Shift + J", "Ctrl + U"
+            e.keyCode === 123 || 
+            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+            (e.ctrlKey && e.keyCode === 85)
+        ) {
+            e.preventDefault();
+        }
+    });
+    (function () {
+        const devtools = {
+            isOpen: false,
+            orientation: undefined
+        };
+        
+        const threshold = 160;
+        
+        const emitEvent = (isOpen, orientation) => {
+            window.dispatchEvent(new CustomEvent('devtoolschange', {
+                detail: {
+                    isOpen,
+                    orientation
+                }
+            }));
+        };
+        
+        setInterval(() => {
+            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+            const orientation = widthThreshold ? 'vertical' : 'horizontal';
+            
+            if (
+                !(heightThreshold && widthThreshold) &&
+                ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)
+            ) {
+                if (!devtools.isOpen || devtools.orientation !== orientation) {
+                    emitEvent(true, orientation);
+                }
+                devtools.isOpen = true;
+                devtools.orientation = orientation;
+            } else {
+                if (devtools.isOpen) {
+                    emitEvent(false, undefined);
+                }
+                devtools.isOpen = false;
+                devtools.orientation = undefined;
+            }
+          }, 500);
+        })();
     </script>
   </body>
 </html>
